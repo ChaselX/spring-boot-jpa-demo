@@ -4,13 +4,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
  * @author XieLongzhen
  * @date 2019/4/19 10:55
  */
 @Entity
-public class User {
+public class User implements Serializable {
+    private static final long serialVersionUID = 8966519296579980L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
